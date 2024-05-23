@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Link, Routes , Route} from 'react-router-dom';
 import Home from "./page/Home";
 import Deteils from "./page/Deteils";
+import { CiDark } from "react-icons/ci";
+
 function App() {
 
   const storedTheme = localStorage.getItem('theme')
@@ -52,6 +54,7 @@ function App() {
   return (
     <div className=" container mx-auto">
       <BrowserRouter>
+      
       <Routes>
         <Route path='/' element={<Home data={data} changeRegion={changeRegion} theme={theme} setTheme={setTheme} chageTheme={chageTheme} search={search} setSearch={setSearch}/>}></Route>
         <Route path='/deteils/:name' element={<Deteils chageTheme={chageTheme} theme={theme} setTheme={setTheme} />}></Route>
