@@ -55,7 +55,7 @@ function App() {
   return (
     <div className=" container mx-auto">
       <BrowserRouter>
-      <Header/>
+      {/* <Header/> */}
       <Routes>
         <Route path='/' element={<Home data={data} changeRegion={changeRegion} theme={theme} setTheme={setTheme} chageTheme={chageTheme} search={search} setSearch={setSearch}/>}></Route>
         <Route path='/deteils/:name' element={<Deteils chageTheme={chageTheme} theme={theme} setTheme={setTheme} />}></Route>

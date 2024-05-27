@@ -30,7 +30,17 @@ function Deteils({ chageTheme }) {
         <div class="ml-[530px] my-28 loader w-[200px] h-[200px] border-4 border-t-4 border-t-blue-500 border-gray-200 rounded-full animate-spin"></div>
       ) : (
         <div>
-          
+          <header className="flex container mx-auto w-[100%] opacity-1 dark:bg-white bg-slate-700   flex-wrap gap-3 justify-between items-center  shadow-lg py-6 my-[-83px] px-5 ml-[-12px] mr-6 fixed">
+            <Link to={`/`}>
+              <h1 className="font-bold text-[20px]">Where in the world?</h1>
+            </Link>
+            <button
+              className="border rounded-sm px-3 py-1 flex items-center gap-[1px]"
+              onClick={chageTheme}
+            >
+              <CiDark /> dark
+            </button>
+          </header>
           <div className="flex items-center justify-between container">
             <Link to={"/"}>
               <button className="border    px-5 py-1 rounded-sm flex items-center gap-3 mt-[70px] ">
