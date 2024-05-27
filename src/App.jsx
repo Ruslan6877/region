@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Routes , Route} from 'react-router-dom';
 import Home from "./page/Home";
 import Deteils from "./page/Deteils";
 import { CiDark } from "react-icons/ci";
+import Header from "./assets/components/Header";
 
 function App() {
 
@@ -54,7 +55,7 @@ function App() {
   return (
     <div className=" container mx-auto">
       <BrowserRouter>
-      
+      <Header/>
       <Routes>
         <Route path='/' element={<Home data={data} changeRegion={changeRegion} theme={theme} setTheme={setTheme} chageTheme={chageTheme} search={search} setSearch={setSearch}/>}></Route>
         <Route path='/deteils/:name' element={<Deteils chageTheme={chageTheme} theme={theme} setTheme={setTheme} />}></Route>
